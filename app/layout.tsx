@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const inter = Inter({
+  variable: "--font-inter",
+});
+
+export const metadata: Metadata = {
+  title: "Home | My Blog",
+  description:
+    "Check out my super cool customized personal fullstack blog site!",
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className="h-full antialiased"
-    >
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body>
         <Nav />
         {children}
