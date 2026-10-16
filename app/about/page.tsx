@@ -24,8 +24,7 @@ function Page() {
               Learn more about the author
             </h2>
             <div className="text-[#1f2d3d] text-center py-10">
-              Talk about who you are, your interests and skills, and just
-              anything you want your readers to know about you.
+              I am a high school student who is passionate about coding and web development, as well as some game development on the side. I built this blog site to maybe share my thoughts, ideas, and projects with the world.
             </div>
           </div>
         </div>
@@ -35,8 +34,7 @@ function Page() {
               What is this blog site for?
             </h2>
             <div className="text-[#1f2d3d] text-center py-10">
-              Tell your readers why you started the blog, what kind of stuff you
-              put on it, and how often you publish new posts.
+              If I ever use this, it will be for posting updates about projects, sharing ideas, etc.
             </div>
           </div>
           <Image src="/user.svg" alt="Avatar" width={200} height={200} />
