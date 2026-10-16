@@ -14,7 +14,7 @@ function Posts({ posts }: { posts: PostType[] }) {
         placeholder="Search blog posts"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="bg-zinc-900 rounded px-3 text-base py-1.5 text-zinc-300 outline-none"
+        className="bg-white border-2 border-[#1f2d3d] px-3 text-base py-1.5 text-[#1f2d3d] outline-none"
       />
       <div className="flex flex-wrap justify-center gap-5">
         {posts.length > 0 ? (
@@ -24,7 +24,7 @@ function Posts({ posts }: { posts: PostType[] }) {
             )
             .map((post) => <Post key={post.id} post={post} />)
         ) : (
-          <Link href="/post">No blogs yet, create one here!</Link>
+          <Link href="/post" className="text-[#1f2d3d] font-bold hover:underline">No blogs yet, create one here!</Link>
         )}
       </div>
     </div>

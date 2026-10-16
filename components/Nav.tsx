@@ -4,18 +4,18 @@ import Btn from "./Btn";
 import Link from "next/link";
 import Image from "next/image";
 
-const linkStyles = "text-zinc-300 hover:text-white py-2";
+const linkStyles = "text-[#1f2d3d] hover:text-[#2f2f2f] hover:font-semibold py-2";
 
 async function Nav() {
   const auth = await initAuth();
   const session = await auth.api.getSession({ headers: await headers() });
 
   return (
-    <nav className="border-b-2 border-zinc-700 px-30 py-3 sticky top-0 z-10 bg-zinc-950">
+    <nav className="border-b-2 border-[#1f2d3d] px-30 py-3 sticky top-0 z-10 bg-[#0088ff]">
       <div className="relative flex gap-x-10 items-center w-full">
         <Link
           href="/"
-          className={linkStyles + " text-xl font-bold mr-5 text-white!"}
+          className={linkStyles + " text-xl font-bold mr-5 text-black!"}
         >
           Home
         </Link>

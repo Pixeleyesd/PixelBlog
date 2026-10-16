@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 import Btn from "./Btn";
 
 const inputStyles =
-  "bg-zinc-900 rounded px-3 text-base py-1.5 text-zinc-300 outline-none";
+  "bg-white border-2 border-[#1f2d3d] px-3 text-base py-1.5 text-[#1f2d3d] outline-none";
 
 function PostForm({
   postBlog,
@@ -29,9 +29,9 @@ function PostForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-y-5 w-130 mx-auto"
+      className="flex flex-col gap-y-5 w-130 mx-auto bg-[lightblue] p-6 m-10"
     >
-      <label className="text-sm text-zinc-300 flex flex-col gap-y-1.5">
+      <label className="text-sm text-[#1f2d3d] flex flex-col gap-y-1.5 font-bold">
         Post title
         <input
           type="text"
@@ -44,13 +44,13 @@ function PostForm({
       {newPost.content.map((paragraph, i) => (
         <label
           key={i}
-          className="text-sm text-zinc-300 flex flex-col gap-y-1.5"
+          className="text-sm text-[#1f2d3d] flex flex-col gap-y-1.5 font-bold"
         >
           <div className="flex justify-between">
             Paragraph {i + 1}
             {newPost.content.length > 1 && (
               <span
-                className="text-red-500 cursor-pointer hover:underline"
+                className="text-red-700 cursor-pointer hover:underline font-normal"
                 onClick={() =>
                   setNewPost({
                     ...newPost,

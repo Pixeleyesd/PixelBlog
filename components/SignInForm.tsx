@@ -12,7 +12,7 @@ interface UserType {
 }
 
 const inputStyles =
-  "bg-zinc-900 rounded px-3 text-base py-1.5 text-zinc-300 outline-none";
+  "bg-white border-2 border-[#1f2d3d] px-3 text-base py-1.5 text-[#1f2d3d] outline-none";
 
 function SignInForm() {
   const [user, setUser] = useState<UserType>({
@@ -52,9 +52,9 @@ function SignInForm() {
   return (
     <form
       onSubmit={handleSignIn}
-      className="flex flex-col gap-y-5 w-130 mx-auto"
+      className="flex flex-col gap-y-5 w-130 mx-auto bg-[lightblue] p-6 m-10"
     >
-      <label className="text-sm text-zinc-300 flex flex-col gap-y-1.5">
+      <label className="text-sm text-[#1f2d3d] flex flex-col gap-y-1.5 font-bold">
         Email
         <input
           placeholder="hello@example.com"
@@ -64,7 +64,7 @@ function SignInForm() {
         />
       </label>
       {user.signUp && (
-        <label className="text-sm text-zinc-300 flex flex-col gap-y-1.5">
+        <label className="text-sm text-[#1f2d3d] flex flex-col gap-y-1.5 font-bold">
           Display name
           <input
             placeholder="Name"
@@ -74,7 +74,7 @@ function SignInForm() {
           />
         </label>
       )}
-      <label className="text-sm text-zinc-300 flex flex-col gap-y-1.5">
+      <label className="text-sm text-[#1f2d3d] flex flex-col gap-y-1.5 font-bold">
         Password
         <input
           type="password"
@@ -84,7 +84,7 @@ function SignInForm() {
           className={inputStyles}
         />
       </label>
-      <label className="cursor-pointer flex gap-x-3 items-center text-zinc-300">
+      <label className="cursor-pointer flex gap-x-3 items-center text-[#1f2d3d] font-bold">
         <input
           type="checkbox"
           checked={user.signUp}

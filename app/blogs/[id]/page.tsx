@@ -42,9 +42,9 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
             title={post.title}
             description={post.date.toLocaleDateString()}
           />
-          <div className="flex flex-col gap-y-10">
+          <div className="flex flex-col gap-y-10 my-10 bg-[lightblue] p-10">
             {post.content.map((paragraph, i) => (
-              <p key={i} className="text-zinc-300 w-220">
+              <p key={i} className="text-[#1f2d3d] w-220 font-sans">
                 {paragraph}
               </p>
             ))}

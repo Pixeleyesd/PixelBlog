@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 interface BtnProps {
   text: string;
   href?: string;
@@ -12,11 +11,11 @@ interface BtnProps {
 }
 
 function Btn({ text, href, onclick, styles, primary, submit }: BtnProps) {
-  const btnStyles = `border-2 rounded cursor-pointer px-3 font-bold py-1.5 w-fit ${styles}
+  const btnStyles = `border-2 border-[#1f2d3d] cursor-pointer px-3 font-bold py-1.5 w-fit ${styles}
         ${
           primary
-            ? "bg-white border-white text-zinc-950 hover:bg-zinc-300 hover:border-zinc-300"
-            : "border-zinc-700 text-zinc-300 hover:bg-zinc-900"
+            ? "bg-[#0088ff] text-black hover:bg-[#0077ee]"
+            : "bg-[lightblue] text-black hover:bg-[#aee2e2]"
         }`;
 
   return href ? (

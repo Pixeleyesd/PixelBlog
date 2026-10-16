@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-inter: var(--font-inter);
+  --font-inter: Arial, Helvetica, sans-serif;
 }
 
 * {
-  @apply font-inter transition-colors duration-300;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color 300ms, background-color 300ms;
+  border-radius: 0px !important;
 }
 
 body {
-  @apply bg-zinc-950;
+  background: #f7fbff;
+  color: #1f2d3d;
+  margin: 0;
 }

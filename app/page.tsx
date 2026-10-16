@@ -25,14 +25,14 @@ export default async function Home() {
           </div>
         </Hero>
         <div>
-          <h2 className="text-2xl font-bold text-center text-white">
+          <h2 className="text-2xl font-bold text-center text-[#1f2d3d]">
             Recent Posts
           </h2>
           <div className="flex flex-wrap justify-center gap-3 py-10">
             {posts.length > 0 ? (
               posts.map((p) => <Post key={p.id} post={p} />)
             ) : (
-              <div className="text-zinc-300 text-center">No posts found :(</div>
+              <div className="text-[#1f2d3d] text-center">No posts found :(</div>
             )}
           </div>
         </div>
